@@ -1,4 +1,7 @@
 const app = require('./')()
+const path = require('path')
+
+app.serveStatic(path.resolve(__dirname, './static'))
 
 app.addQuestion
 (

@@ -1,7 +1,24 @@
 {
   "name": "reply-to-visit",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "twesix",
+  "description": "answer a question to access the website",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "question",
+    "authorization by question"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twesix/reply-to-visit"
+  },
+  "bugs": {
+    "url": "https://github.com/twesix/reply-to-visit"
+  },
+  "homepage": "https://github.com/twesix/reply-to-visit#readme",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2"
