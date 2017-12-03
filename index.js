@@ -2,11 +2,12 @@ const questions = require('./lib/questions')
 const config = require('./lib/config')
 const express = require('express')
 
-const app = require('./lib/entry')
-
 module.exports = function(port)
 {
     config.port = port || config.port
+
+    const app = require('./lib/entry')
+
     return {
         addQuestion: questions.addQuestion,
         serveStatic: function(path, dirPath)
