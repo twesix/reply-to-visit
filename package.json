@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "author": "twesix",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2"
   }
 }

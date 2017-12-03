@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bulma/0.6.1/css/bulma.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<section class="hero is-info">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Good Luck
+            </h1>
+            <h2 class="subtitle">
+                You Need To Answer A Question To Visit This Website
+            </h2>
+        </div>
+    </div>
+</section>
+<br>
+<div class="columns is-mobile">
+    <div class="column is-1"></div>
+    <div class="column is-10">
+        <form action="#" method="get">
+            <div class="field">
+                <div class="control">
+                    <input type="text" class="input is-static is-invisible" id="id" name="id" readonly>
+                </div>
+            </div>
+            <div class="field">
+                <label for="question" class="label">Question</label>
+                <div class="control">
+                    <input type="text" class="input is-static" id="question" readonly>
+                </div>
+            </div>
+            <div class="field">
+                <label for="tip" class="label">Tip</label>
+                <div class="control">
+                    <input type="text" class="input is-static" id="tip">
+                </div>
+            </div>
+            <hr>
+            <div class="field">
+                <label for="answer" class="label">Your Answer</label>
+                <div class="control">
+                    <input type="text" class="input is-primary" id="answer" name="answer" required>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-outlined is-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="column is-1"></div>
+</div>
+
+<script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+<script>
+    if(location.hash === '#answerIsWrong')
+    {
+        location.hash = ''
+        alert('answer is wrong')
+    }
+    else
+    {
+        fetch('getRandomQuestion/')
+            .then(function(response)
+            {
+                response.json()
+                    .then(function(question)
+                    {
+                        document.getElementById('question').value = question.question
+                        document.getElementById('tip').value = question.tip
+                        document.getElementById('id').value = question.id
+                    })
+            })
+    }
+</script>
+
+</body>
+</html>
