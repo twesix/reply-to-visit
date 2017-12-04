@@ -1,4 +1,4 @@
-const app = require('./')()
+const app = require('./')(3000, '/')
 const path = require('path')
 
 app.serveStatic(path.resolve(__dirname, './static'))
