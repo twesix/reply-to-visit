@@ -2,9 +2,9 @@ const questions = require('./lib/questions')
 const config = require('./lib/config')
 const express = require('express')
 
-module.exports = function(port, subPath = '/')
+module.exports = function(port = config.port, subPath = '/')
 {
-    config.port = port || config.port
+    config.port = port
     config.subPath = subPath
 
     const app = require('./lib/entry')
