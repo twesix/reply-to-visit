@@ -1,3 +1,13 @@
+[![npm](https://img.shields.io/npm/v/reply-to-visit.svg)](https://www.npmjs.com/package/reply-to-visit)
+
+
+[![npm](https://img.shields.io/npm/dw/reply-to-visit.svg)](https://www.npmjs.com/package/reply-to-visit)
+
+
+[![npm](https://img.shields.io/npm/l/reply-to-visit.svg)](https://www.npmjs.com/package/reply-to-visit)
+
+
+
 # reply-to-visit
 
 在网站前面设置一道关卡, 回答问题以获得网站的访问权限
