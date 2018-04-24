@@ -1,8 +1,8 @@
 # reply-to-visit
 
-> answer a question to access the website
+在网站前面设置一道关卡, 回答问题以获得网站的访问权限
 
-Usage: 
+用法: 
 
 ```javascript
 const path = require('path')
