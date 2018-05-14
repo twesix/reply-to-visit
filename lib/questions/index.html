@@ -64,22 +64,19 @@
     if(location.hash === '#answerIsWrong')
     {
         location.hash = ''
-        alert('answer is wrong')
+        alert('答案错误 !')
     }
-    else
-    {
-        fetch('getRandomQuestion/')
-            .then(function(response)
-            {
-                response.json()
-                    .then(function(question)
-                    {
-                        document.getElementById('question').value = question.question
-                        document.getElementById('tip').value = question.tip
-                        document.getElementById('id').value = question.id
-                    })
-            })
-    }
+    fetch('getRandomQuestion/')
+        .then(function(response)
+        {
+            response.json()
+                .then(function(question)
+                {
+                    document.getElementById('question').value = question.question
+                    document.getElementById('tip').value = question.tip
+                    document.getElementById('id').value = question.id
+                })
+        })
 </script>
 
 </body>

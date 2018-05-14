@@ -1,4 +1,5 @@
-const app = require('./index')(3000, '/')
+const app = require('./index')(3000, '/test/')
+// const app = require('./index')(3001, '/')
 const path = require('path')
 
 app.serveStatic(path.resolve(__dirname, './static'))
